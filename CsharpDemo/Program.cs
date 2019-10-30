@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CsharpDemo
 {
@@ -9,7 +10,28 @@ namespace CsharpDemo
             Console.WriteLine("Enter Name");
             var name = Console.ReadLine();
             Console.WriteLine("Welcome " + name);
+           
+
+            var employees = new List<Employee>
+            {
+                new Employee{Name="Mahesh",Age=29},
+                new Employee{Name="Bharath",Age=30}
+            };
+
+            Console.WriteLine("Employess Details :");
+            employees.ForEach(employee =>
+            {
+                Console.WriteLine($"Name : {employee.Name}               Age : {employee.Age}");
+            });
+
             Console.ReadLine();
         }
+    }
+
+    public class Employee
+    {
+        public string Name { get; set; }
+
+        public int Age { get; set; }
     }
 }
