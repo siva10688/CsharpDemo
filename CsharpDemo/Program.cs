@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace CsharpDemo
 {
@@ -10,7 +11,7 @@ namespace CsharpDemo
             Console.WriteLine("Enter Name");
             var name = Console.ReadLine();
             Console.WriteLine("Welcome " + name);
-           
+
 
             var employees = new List<Employee>
             {
@@ -23,6 +24,10 @@ namespace CsharpDemo
             {
                 Console.WriteLine($"Name : {employee.Name}               Age : {employee.Age}");
             });
+
+            var employeesJson = JsonConvert.SerializeObject(employees);
+
+            Console.WriteLine(employeesJson);
 
             Console.ReadLine();
         }
