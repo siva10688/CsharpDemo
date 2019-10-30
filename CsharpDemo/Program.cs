@@ -8,7 +8,7 @@ namespace CsharpDemo
         {
             Console.WriteLine("Enter Name");
             var name = Console.ReadLine();
-            Console.WriteLine($"Welcome {name}");
+            Console.WriteLine("Welcome " + name);
             Console.ReadLine();
         }
     }
