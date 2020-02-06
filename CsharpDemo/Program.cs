@@ -28,8 +28,6 @@ namespace CsharpDemo
             var employeesJson = JsonConvert.SerializeObject(employees);
 
             Console.WriteLine(employeesJson);
-
-            Console.ReadLine(12);
         }
     }
 
