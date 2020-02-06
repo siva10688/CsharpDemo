@@ -29,7 +29,7 @@ namespace CsharpDemo
 
             Console.WriteLine(employeesJson);
 
-            Console.WriteLine(1);
+            Console.ReadLine(1);
         }
     }
 
